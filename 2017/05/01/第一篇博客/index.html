@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Ja50n&#39;s B10g Sit3">
 <meta property="og:description" content="这第一篇博客，就讲讲这个站是怎么诞生的吧。  依赖 git npm hexo    步骤 安装npm，执行代码并检查npm是否安装成功 12brew install nodenpm -v  安装hexo，执行 1npm install hexo-cli -g -d  去GitHub新建一个repository。具体步骤就不赘述了  新建好repo后，控制台cd到你希望放博客项目的地方执行 12gi">
 <meta property="og:image" content="https://jason2031.github.io/2017/05/01/第一篇博客/initial_screenshot.png">
-<meta property="og:updated_time" content="2017-05-01T16:24:10.000Z">
+<meta property="og:updated_time" content="2017-05-01T16:36:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一篇博客">
 <meta name="twitter:description" content="这第一篇博客，就讲讲这个站是怎么诞生的吧。  依赖 git npm hexo    步骤 安装npm，执行代码并检查npm是否安装成功 12brew install nodenpm -v  安装hexo，执行 1npm install hexo-cli -g -d  去GitHub新建一个repository。具体步骤就不赘述了  新建好repo后，控制台cd到你希望放博客项目的地方执行 12gi">
@@ -391,9 +391,22 @@
 </li>
 <li><p>发布更新博客</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d -g</div></pre></td></tr></table></figure>
-<p>发布时好像要输入账号密码</p>
+<p>发布时好像要输入账号密码，当你看到</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO  Deploy done: git</div></pre></td></tr></table></figure>
+<p>时，说明已经部署成功了，可以到相应的.github.io看看成果</p>
 </li>
 </ul>
+</li>
+</ol>
+<h3 id="Make-it-fancier"><a href="#Make-it-fancier" class="headerlink" title="Make it fancier"></a>Make it fancier</h3><ol>
+<li><p>主题</p>
+<p>通过你喜欢的主题来定制自己的博客，可以到<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>挑选自己喜欢的主题。以本博客使用的<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">NexT</a>为例，在博客项目根目录执行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next #主题的地址</div></pre></td></tr></table></figure>
+<p>再到根目录_config.yml中指定</p>
+<blockquote>
+<p>theme: next</p>
+</blockquote>
+<p>下载安装后的个性化就根据各个主题而定了，具体请参考各个主题的介绍，这里不再赘述</p>
 </li>
 </ol>
 
@@ -562,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖"><span class="nav-number">1.</span> <span class="nav-text">依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Make-some-magic"><span class="nav-number">3.</span> <span class="nav-text">Make some magic</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖"><span class="nav-number">1.</span> <span class="nav-text">依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Make-some-magic"><span class="nav-number">3.</span> <span class="nav-text">Make some magic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Make-it-fancier"><span class="nav-number">4.</span> <span class="nav-text">Make it fancier</span></a></li></ol></div>
             
 
           </div>

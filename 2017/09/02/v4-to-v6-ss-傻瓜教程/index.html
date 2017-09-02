@@ -1,0 +1,881 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="教程," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="媷资本主义羊毛！">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="v4-to-v6 ss 傻瓜教程">
+<meta property="og:url" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/index.html">
+<meta property="og:site_name" content="Ja50n&#39;s B10g Sit3">
+<meta property="og:description" content="媷资本主义羊毛！">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/IMG_3227.jpg">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/aws.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/console.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/ec2.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/ec2console.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/ami.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/t2micro.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/securitygroup.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/instance.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/sg.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/vpcconsole.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/ipv6.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/setting.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/serversetting.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/global.png">
+<meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/net.png">
+<meta property="og:updated_time" content="2017-09-02T05:14:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="v4-to-v6 ss 傻瓜教程">
+<meta name="twitter:description" content="媷资本主义羊毛！">
+<meta name="twitter:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/IMG_3227.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/"/>
+
+
+
+
+
+  <title>v4-to-v6 ss 傻瓜教程 | Ja50n's B10g Sit3</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ja50n's B10g Sit3</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随便写写</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Wood">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ja50n's B10g Sit3">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                v4-to-v6 ss 傻瓜教程
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T12:53:07+08:00">
+                2017-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>媷资本主义羊毛！</p>
+<a id="more"></a>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">本篇教程需要一张信用卡</div></pre></td></tr></table></figure>
+<p>又到一年开学季，在家用习惯了包月包年50M100M带宽的无限畅爽，来到五道口体育学院一个月20G+分档收费（据说现在改成25G+¥2/G了？）的ipv4流量简直不够用啊，然而学校的ipv6流量免费用，这让我有了一个大胆的想法（其实这个想法在明光村电脑专修学院的时候就有了，只不过形势没那么严峻而已，小破邮的筒子们你们知足吧，至少在网费这件事上你们甩我们一个五道口了）——将ipv4流量代理到ipv6，那岂不是美滋滋？</p>
+<p>“翻♂墙”这个词是很敏感的，尤其我本科学校的前校长正是GFW之父——方老师，但是读书人不叫“翻♂墙”，叫“代♂理”！</p>
+<p>闲扯淡了这么多，接下来谈正事。</p>
+<p>如何在清华大学（以及其他有校园网的环境下）实现ipv4免流呢？下图是我画的一个示例图（手残晚期大家凑合着看吧）<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/IMG_3227.jpg" alt="IMG_3227"></p>
+<p>假设我需要在清华校园网内上b站，正常情况下计算机跟b站服务器之间是走ipv4的，学校也就会因此计入我们的流量。跟着本博文介绍的方法一路走下去，你的计算机跟b站服务器的通信走的是绿色这条线，云服务器（本博文以亚马逊AWS EC2为例）与b站的流量是正常的ipv4，而云服务器跟校园网内的电脑之间的流量走的是ipv6。</p>
+<p>既能翻♂墙，还能免♂流。</p>
+<hr>
+<h3 id="开始工作"><a href="#开始工作" class="headerlink" title="开始工作"></a>开始工作</h3><p>你需要：</p>
+<ul>
+<li>一张信用卡 —— 用于注册AWS EC2</li>
+<li>确定你有ipv6访问权限</li>
+</ul>
+<p>关于第一点不用多说，如果没有的话找父母借吧（滑稽</p>
+<p>关于第二点，一般校园网环境都能访问ipv6，如果你不确定，可以尝试访问<a href="http://bt.byr.cn" target="_blank" rel="external">byrbt</a>，如果出现了byrbt的登录/注册页面（当然，或者首页）那说明你能访问ipv6。如果只有ipv4访问权限，但想科学♂上网，也可以照着本篇博文一部分来做。</p>
+<hr>
+<h3 id="申请云主机"><a href="#申请云主机" class="headerlink" title="申请云主机"></a>申请云主机</h3><p>本博文以亚马逊AWS为例，类似的有google cloud、vultr等。</p>
+<p>访问<a href="https://amazonaws-china.com/cn/" target="_blank" rel="external">这个网页</a>以注册一个亚马逊aws账号，它大概长这样<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/aws.png" alt="aws"></p>
+<p>我们来做一下数学题，一天24小时，一个月最长31天，也就是说一个月最长24*31=744小时，aws每个月750小时免费时间，也就是说一直免费（滑稽</p>
+<p>实际上，aws是按照每个实例所运行时长总和这样计时的，也就是说运行一个实例的话是免费的，如果你账号内运行着2个或更多个实例的话，在750/n个小时内是免费的，超过的部分会计费。</p>
+<p>由于我事先已经注册过了，在这里无法提供截图。注册时会让你填写联系人、地址等信息，这些都需要用英文填写。之后要填写信用卡信息及验证，验证时会扣$1的费用，会返还（也不知道是不是，估计返还的时候都忘了这回事了）。接下来是验证手机，一定要填一个有效的手机号，填好了之后会有电话打入，<u>请耐心听完英语，别以为是骗子就挂掉了</u>，电话里会告诉你验证码，输入验证码之后验证完成。</p>
+<p>注册完成后跳转到控制台，注意右上角的区域选择，大概随便一个区域都可以科学♂上网吧，我这里随便选了个区域。<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/console.png" alt="console"></p>
+<p>我们需要的是EC2，在AWS服务搜索框搜EC2，点击进入EC2控制台<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/ec2.png" alt="ec2"></p>
+<p>它长这样，点击“启动实例”<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/ec2console.png" alt="ec2console"></p>
+<p>选择AMI，为了更好地媷资本主义羊毛，我们注意选择免费套餐<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/ami.png" alt="ami"></p>
+<p>具体系统大家可以自行选择，本博文以<strong>Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - ami-10547475</strong>这个映像为例。点击“选择”后跳转到实例类型选择，选默（mian）认（fei）的就可以。<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/t2micro.png" alt="t2micro"></p>
+<p>后面的设置基本上选默认的就行，到“配置安全组”步骤，你可以创建一个新安全组，并指定流量类型、协议、端口范围、来源等等，安全组在下面会再提到。<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/securitygroup.png" alt="securitygroup"></p>
+<p>选完了之后就可以审核并启动了，审核的时候要求提供密钥对，这里新建一个密钥对，命名好之后浏览器会下载一个对应名字的.pem文件，保存好这个文件，以后ssh登录时需要用到这个文件。</p>
+<p>审核启动后，可以到实例页面看到刚刚创建的实例了，它大概长这样。描述里提供了公有DNS、IP等信息，当实例状态处于running，且状态检查是“2/2 的检查已通过”时，你就可以ssh登录这个实例了。<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/instance.png" alt="instance"></p>
+<p>这时先编辑一下安全组，实例面板最右边有该实例正在使用的安全组，点击查看该安全组，这里可以编辑入站和出站流量，为了图方便，我的入站和出站流量选择了全部流量全部协议全部端口任何来源。（比较容易被攻击，但是就是懒得弄了）<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/sg.png" alt="sg"></p>
+<p>（我的本机是mac，所以接下来的shell代码都是unix shell，windows请自行修改）这时启动终端，定位到刚刚下载的.pem文件所在目录，将.pem文件设置为r–模式，并以该文件作为身份文件登录实例，登录实例时用”ubuntu”作为用户。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd Downloads/</div><div class="line">chmod 400 xxx.pem</div><div class="line">ssh -i "xxx.pem" ubuntu@address.to.instance</div></pre></td></tr></table></figure>
+<p>到这里你已经可以连接到实例了。</p>
+<p>如果你只有ipv4访问，那么你可以跳过下一节。</p>
+<hr>
+<h3 id="让实例可以访问ipv6"><a href="#让实例可以访问ipv6" class="headerlink" title="让实例可以访问ipv6"></a>让实例可以访问ipv6</h3><p>进入<a href="https://console.aws.amazon.com/vpc/" target="_blank" rel="external">vpc控制台页面</a>进行编辑。<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/vpcconsole.png" alt="vpcconsole"></p>
+<ol>
+<li><h4 id="将-IPv6-CIDR-块与您的-VPC-和子网关联"><a href="#将-IPv6-CIDR-块与您的-VPC-和子网关联" class="headerlink" title="将 IPv6 CIDR 块与您的 VPC 和子网关联"></a>将 IPv6 CIDR 块与您的 VPC 和子网关联</h4><ol>
+<li><h5 id="将-IPv6-CIDR-块与-VPC-关联"><a href="#将-IPv6-CIDR-块与-VPC-关联" class="headerlink" title="将 IPv6 CIDR 块与 VPC 关联"></a>将 IPv6 CIDR 块与 VPC 关联</h5><ol>
+<li>选择<strong>您的VPC</strong>，并记下<strong>VPC ID</strong>。</li>
+<li>选择一个VPC后点击<strong>操作</strong>，选择<strong>编辑CIDR</strong>。</li>
+<li>选择<strong>添加 IPV6 CIDR</strong>。添加完毕后选择<strong>关闭</strong>。</li>
+</ol>
+</li>
+<li><h5 id="将-IPv6-CIDR-块与子网关联"><a href="#将-IPv6-CIDR-块与子网关联" class="headerlink" title="将 IPv6 CIDR 块与子网关联"></a>将 IPv6 CIDR 块与子网关联</h5><ol>
+<li>选择<strong>子网</strong>。</li>
+<li>选择上一步编辑的VPC对应的子网，点击<strong>子网操作</strong>，选择编辑 <strong>IPV6 CIDR</strong>。</li>
+<li>选择<strong>添加 IPv6 CIDR</strong>。为子网指定十六进制对 (例如，00、11) 并通过选择对勾图标来确认该条目，完成后点击<strong>关闭</strong>。</li>
+<li>对VPC中的其他子网重复上述步骤。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h4 id="查看网关ID"><a href="#查看网关ID" class="headerlink" title="查看网关ID"></a>查看网关ID</h4><ol>
+<li>在导航窗格中，选择<strong>Internet 网关</strong>。</li>
+<li>记下附加在第一步编辑的VPC的网关的<strong>ID</strong>。</li>
+</ol>
+</li>
+<li><h4 id="更新路由表"><a href="#更新路由表" class="headerlink" title="更新路由表"></a>更新路由表</h4><ol>
+<li>在导航窗格中，选择<strong>路由表</strong>并选择与私有子网关联的路由表。</li>
+<li>在<strong>路由</strong>选项卡中，选择<strong>编辑</strong>，为<strong>Destination</strong>（中文翻译问题，第一个“目标”）指定 <code>::/0</code>，为<strong>Target</strong>（第二个“目标”）选择上一步记下的<strong>Internet 网关 ID</strong>，然后点击<strong>保存</strong>。</li>
+</ol>
+</li>
+<li><h4 id="更新安全组规则"><a href="#更新安全组规则" class="headerlink" title="更新安全组规则"></a>更新安全组规则</h4><ol>
+<li>在导航窗格中，选择<strong>安全组</strong>，并选择VPC对应的 Web 服务器安全组。</li>
+<li>与前文提到的安全组类似，编辑入站、出站规则，注意源和目标的地址要包括你的IPV6地址（::/0）。</li>
+</ol>
+</li>
+<li><h4 id="更改实例"><a href="#更改实例" class="headerlink" title="更改实例"></a>更改实例</h4><ol>
+<li>回到<a href="https://console.aws.amazon.com/ec2/" target="_blank" rel="external">EC2控制台页面</a>。</li>
+<li>（将前面创建的实例终止，点击<strong>实例</strong>，选择对应实例，点击<strong>操作</strong>→<strong>实例状态</strong>→<strong>终止</strong>，稍等片刻，待实例状态显示<strong>terminated</strong>即可）</li>
+<li><strong>启动实例</strong>，重复上文提到的操作，直到<strong>配置实例</strong>步骤，在<strong>网络</strong>选项，选择前面编辑的<strong>VPC</strong>。在<strong>子网</strong>选项，选择一个子网。在<strong>自动分配公有 IP</strong>及<strong>自动分配 IPv6 IP</strong>选项，选择带有“<strong>启用</strong>”的选项。</li>
+<li>其他选择默认即可。</li>
+</ol>
+</li>
+<li><h4 id="为实例分配-IPv6-地址"><a href="#为实例分配-IPv6-地址" class="headerlink" title="为实例分配 IPv6 地址"></a>为实例分配 IPv6 地址</h4><ol>
+<li>返回<a href="https://console.aws.amazon.com/ec2/" target="_blank" rel="external">EC2控制台页面</a>，在导航窗格中选择<strong>实例</strong>。</li>
+<li>选择刚才创建的实例，然后选择<strong>操作</strong>→<strong>联网</strong>→<strong>管理IP地址</strong>。</li>
+<li>在<strong>IPV6地址</strong>下，选择<strong>分配新IP</strong>，可以输入子网范围内的特定 IPv6 地址，也可以保留默认的 <code>Auto-Assign</code> 值，让 Amazon 选择一个地址。</li>
+<li>选择<strong>是，请更新</strong>。</li>
+</ol>
+</li>
+<li><h4 id="可选-在实例中配置-IPv6"><a href="#可选-在实例中配置-IPv6" class="headerlink" title="(可选) 在实例中配置 IPv6"></a>(可选) 在实例中配置 IPv6</h4><p>如果经过上述步骤，实例仍无法访问IPV6，可以进行以下步骤。</p>
+<ol>
+<li><p>使用实例的公有 IPv4 地址连接到您的实例。</p>
+</li>
+<li><p>查看 <code>/etc/network/interfaces.d/50-cloud-init.cfg</code> 文件的内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/network/interfaces.d/50-cloud-init.cfg</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> This file is generated from information provided by</div><div class="line"><span class="meta">#</span> the datasource.  Changes to it will not persist across an instance.</div><div class="line"><span class="meta">#</span> To disable cloud-init's network configuration capabilities, write a file</div><div class="line"><span class="meta">#</span> /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:</div><div class="line"><span class="meta">#</span> network: &#123;config: disabled&#125;</div><div class="line">auto lo</div><div class="line">iface lo inet loopback</div><div class="line"></div><div class="line">auto eth0</div><div class="line">iface eth0 inet dhcp</div></pre></td></tr></table></figure>
+<p>确认已配置回环网络设备 <code>lo</code>，记下网络接口的名称。在此示例中，网络接口名称为<code>eth0</code>；根据实例类型，此名称可能不同。</p>
+</li>
+<li><p>创建文件 <code>/etc/network/interfaces.d/60-default-with-ipv6.cfg</code> 并添加以下行。如果需要，将 <code>eth0</code>替换为在上一步中检索到的网络接口的名称。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iface eth0 inet6 dhcp</div></pre></td></tr></table></figure>
+</li>
+<li><p>重启实例，或者通过运行以下命令重新启动网络接口。如果需要，将 <code>eth0</code> 替换为在第一步中检索到的网络接口的名称。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ifdown eth0 ; sudo ifup eth0</div></pre></td></tr></table></figure>
+</li>
+<li><p>重新连接到实例，并使用 <code>ifconfig</code> 命令验证网络接口上是否配置了 IPv6 地址。</p>
+</li>
+</ol>
+<p>其他系统可参考<a href="http://docs.aws.amazon.com/zh_cn/AmazonVPC/latest/UserGuide/vpc-migrate-ipv6.html#vpc-migrate-ipv6-dhcpv6" target="_blank" rel="external">这个页面</a>。</p>
+<p>至此，你的实例应该能访问ipv6地址了。你可以登录实例然后输入以下指令验证：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping6 ipv6.google.com</div></pre></td></tr></table></figure>
+<p>在这个地方也会显示你实例的ipv6地址<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/ipv6.png" alt="ipv6"></p>
+</li>
+</ol>
+<hr>
+<h3 id="搭建shadowsocks服务器"><a href="#搭建shadowsocks服务器" class="headerlink" title="搭建shadowsocks服务器"></a>搭建shadowsocks服务器</h3><p>以ubuntu为例，用ssh连接到实例之后，安装pip、shadowsocks以及必要组件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ubuntu@ip-xx-xx-xx-xx:~$ sudo -s</div><div class="line">root@ip-xx-xx-xx-xx:~# apt-get install update</div><div class="line">root@ip-xx-xx-xx-xx:~# apt-get -y install python3-pip</div><div class="line">root@ip-xx-xx-xx-xx:~# pip3 install shadowsocks</div><div class="line">root@ip-xx-xx-xx-xx:~# apt-get -y install python-m2crypto</div></pre></td></tr></table></figure>
+<p>安装完成后可以执行<code>ssserver -h</code>以验证shadowsocks是否安装成功，若成功则会出现如下提示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">root@ip-xx-xx-xx-xx:~# ssserver -h</div><div class="line">usage: ssserver [OPTION]...</div><div class="line">A fast tunnel proxy that helps you bypass firewalls.</div><div class="line"></div><div class="line">You can supply configurations via either config file or command line arguments.</div><div class="line"></div><div class="line">Proxy options:</div><div class="line">  -c CONFIG              path to config file</div><div class="line">  -s SERVER_ADDR         server address, default: 0.0.0.0</div><div class="line">  -p SERVER_PORT         server port, default: 8388</div><div class="line">  -k PASSWORD            password</div><div class="line">  -m METHOD              encryption method, default: aes-256-cfb</div><div class="line">  -t TIMEOUT             timeout in seconds, default: 300</div><div class="line">  --fast-open            use TCP_FASTOPEN, requires Linux 3.7+</div><div class="line">  --workers WORKERS      number of workers, available on Unix/Linux</div><div class="line">  --forbidden-ip IPLIST  comma seperated IP list forbidden to connect</div><div class="line">  --manager-address ADDR optional server manager UDP address, see wiki</div><div class="line"></div><div class="line">General options:</div><div class="line">  -h, --help             show this help message and exit</div><div class="line">  -d start/stop/restart  daemon mode</div><div class="line">  --pid-file PID_FILE    pid file for daemon mode</div><div class="line">  --log-file LOG_FILE    log file for daemon mode</div><div class="line">  --user USER            username to run as</div><div class="line">  -v, -vv                verbose mode</div><div class="line">  -q, -qq                quiet mode, only show warnings/errors</div><div class="line">  --version              show version information</div><div class="line"></div><div class="line">Online help: &lt;https://github.com/shadowsocks/shadowsocks&gt;</div></pre></td></tr></table></figure>
+<p>如果没有ssserver命令的话，可以执行<code>which ssserver</code>指令查找：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">root@ip-xx-xx-xx-xx:~# which ssserver</div><div class="line">/usr/local/bin/ssserver</div></pre></td></tr></table></figure>
+<p>只需要把/usr/local/bin加入到/etc/profile文件中即可。</p>
+<p>创建shadowsocks目录，并创建ss配置文件，如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">root@ip-xx-xx-xx-xx:~# mkdir /etc/shadowsocks</div><div class="line">root@ip-xx-xx-xx-xx:~# vim /etc/shadowsocks/config.json</div><div class="line">&#123;</div><div class="line">        "server":"::",</div><div class="line">        "server_port": 8388,</div><div class="line">        "password":"yourpsw",</div><div class="line">        "method":"aes-256-cfb",</div><div class="line">        "local_address":"127.0.0.1",</div><div class="line">        "local_port":1080,</div><div class="line">        "timeout":300,</div><div class="line">        "fast_open":true,</div><div class="line">        "workders":1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>其中”server”项填”::”是为了让ss同时监听ipv4和ipv6流量，”server_port”项填入你希望的外部端口。编辑完成后按esc，输入<code>:wq</code>退出。</p>
+<p>执行<code>ssserver -c /etc/shadowsocks/config.json -d start</code>启动ss，其中<code>-d</code>参数是使ss在后台进程中运行。</p>
+<p>启动后执行<code>netstat -tunlp</code>指令查看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">root@ip-xx-xx-xx-xx:~# netstat -tunlp</div><div class="line">Active Internet connections (only servers)</div><div class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</div><div class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1270/sshd</div><div class="line">tcp6       0      0 :::8388                 :::*                    LISTEN      9421/python3</div><div class="line">tcp6       0      0 :::22                   :::*                    LISTEN      1270/sshd</div><div class="line">udp        0      0 0.0.0.0:68              0.0.0.0:*                           1547/dhclient</div><div class="line">udp        0      0 0.0.0.0:42836           0.0.0.0:*                           9421/python3</div><div class="line">udp6       0      0 fe80::8aa:e7ff:fe67:546 :::*                                1620/dhclient</div><div class="line">udp6       0      0 :::8388                 :::*                                9421/python3</div></pre></td></tr></table></figure>
+<p>其中两个端口号为8388的就是我这个实例启动的ss进程了。</p>
+<hr>
+<h3 id="客户端连接ss服务"><a href="#客户端连接ss服务" class="headerlink" title="客户端连接ss服务"></a>客户端连接ss服务</h3><p>ss服务器搭建完毕后，我们需要一个客户端以连接ss服务器。</p>
+<p>客户端：</p>
+<ol>
+<li>Windows - <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="external">release</a></li>
+<li>MacOS - <a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank" rel="external">release</a></li>
+<li>iOS - <a href="https://github.com/shadowsocks/shadowsocks-iOS/releases" target="_blank" rel="external">release</a></li>
+<li>Android - <a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank" rel="external">release</a></li>
+</ol>
+<p>以MacOS的ShadowsocksX-NG为例，下载安装后，点击软件图标→服务器→服务器设置<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/setting.png" alt="setting"></p>
+<p>点击左下角的“＋”，在地址栏填入实例的ipv6地址<u><strong><em>（如果没有ipv6访问权限的话，填入实例的ipv4地址或者ipv4 dns也可以科学♂上网）</em></strong></u>及ss端口号，加密方法填ss配置文件config.json里设置的<code>method</code>项，这里用的是<code>aes-256-cfb</code>，填入密码点击确定即可。<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/serversetting.png" alt="serversetting"></p>
+<p>然后点击软件图标，<strong>选择全局模式！</strong> <strong>选择全局模式！</strong> <strong>选择全局模式！</strong>一定要选择全局模式，然后选择<strong>打开 Shadowsocks</strong>即可。<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/global.png" alt="global"></p>
+<hr>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>注意：</p>
+<ol>
+<li>要先在<a href="net.tsinghua.edu.cn">登录页面</a>登录之后再打开shadowsocks服务，不然无法联网（至少在清华是这样的，不知道其他学校是否需要先登录校园网）。</li>
+<li>关于代理方式，如果不嫌麻烦的话可以选择手动模式，然后自定规则，否则一定要选<strong>全局模式</strong>，如果选择自动模式的话，访问没有被GFW墙的网站（如b站）将不走代理，也就是说走正常的ipv4（第一张图的蓝色线），我在开始的时候忘记选全局模式，测试的时候流量蹭蹭的就没了T_T<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/net.png" alt="net"></li>
+<li>占了小便宜，就得有一定的限制，这个限制就是网速会比较慢，毕竟是国外的云服务器，开国内的网站也许做不到秒开，但是还是在能忍受的范围内。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/10/这是一碗狗粮/" rel="next" title="这是一碗狗粮">
+                <i class="fa fa-chevron-left"></i> 这是一碗狗粮
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Jason Wood" />
+          <p class="site-author-name" itemprop="name">Jason Wood</p>
+           
+              <p class="site-description motion-element" itemprop="description">学习笔记 & 吃吃吃 & 玩玩玩</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Jason2031" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始工作"><span class="nav-number">2.</span> <span class="nav-text">开始工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#申请云主机"><span class="nav-number">3.</span> <span class="nav-text">申请云主机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#让实例可以访问ipv6"><span class="nav-number">4.</span> <span class="nav-text">让实例可以访问ipv6</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将-IPv6-CIDR-块与您的-VPC-和子网关联"><span class="nav-number">4.1.</span> <span class="nav-text">将 IPv6 CIDR 块与您的 VPC 和子网关联</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#将-IPv6-CIDR-块与-VPC-关联"><span class="nav-number">4.1.1.</span> <span class="nav-text">将 IPv6 CIDR 块与 VPC 关联</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#将-IPv6-CIDR-块与子网关联"><span class="nav-number">4.1.2.</span> <span class="nav-text">将 IPv6 CIDR 块与子网关联</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看网关ID"><span class="nav-number">4.2.</span> <span class="nav-text">查看网关ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新路由表"><span class="nav-number">4.3.</span> <span class="nav-text">更新路由表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新安全组规则"><span class="nav-number">4.4.</span> <span class="nav-text">更新安全组规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更改实例"><span class="nav-number">4.5.</span> <span class="nav-text">更改实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为实例分配-IPv6-地址"><span class="nav-number">4.6.</span> <span class="nav-text">为实例分配 IPv6 地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可选-在实例中配置-IPv6"><span class="nav-number">4.7.</span> <span class="nav-text">(可选) 在实例中配置 IPv6</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建shadowsocks服务器"><span class="nav-number">5.</span> <span class="nav-text">搭建shadowsocks服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端连接ss服务"><span class="nav-number">6.</span> <span class="nav-text">客户端连接ss服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number">7.</span> <span class="nav-text">后记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jason Wood</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

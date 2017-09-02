@@ -117,7 +117,7 @@
 <meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/serversetting.png">
 <meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/global.png">
 <meta property="og:image" content="https://jason2031.github.io/2017/09/02/v4-to-v6-ss-傻瓜教程/net.png">
-<meta property="og:updated_time" content="2017-09-02T05:25:51.000Z">
+<meta property="og:updated_time" content="2017-09-02T08:44:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v4-to-v6 ss 傻瓜教程">
 <meta name="twitter:description" content="媷资本主义羊毛！">
@@ -483,9 +483,9 @@
 <hr>
 <h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>注意：</p>
 <ol>
-<li>要先在<a href="net.tsinghua.edu.cn">登录页面</a>登录之后再打开shadowsocks服务，不然无法联网（至少在清华是这样的，不知道其他学校是否需要先登录校园网）。</li>
-<li>关于代理方式，如果不嫌麻烦的话可以选择手动模式，然后自定规则，否则一定要选<strong>全局模式</strong>，如果选择自动模式的话，访问没有被GFW墙的网站（如b站）将不走代理，也就是说走正常的ipv4（第一张图的蓝色线），我在开始的时候忘记选全局模式，测试的时候流量蹭蹭的就没了T_T<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/net.png" alt="net"></li>
-<li>占了小便宜，就得有一定的限制，这个限制就是网速会比较慢，毕竟是国外的云服务器，开国内的网站也许做不到秒开，但是还是在能忍受的范围内。</li>
+<li><del>要先在<a href="net.tsinghua.edu.cn">登录页面</a>登录之后再打开shadowsocks服务，不然无法联网（至少在清华是这样的，不知道其他学校是否需要先登录校园网）。</del>经测试，不登录才是正确的打开方式。。。。</li>
+<li>关于代理方式，如果不嫌麻烦的话可以选择手动模式，然后用socks5代理到localhost:1086，否则一定要选<strong>全局模式</strong>，如果选择自动模式的话，访问没有被GFW墙的网站（如b站）将不走代理，也就是说走正常的ipv4（第一张图的蓝色线），我在开始的时候忘记选全局模式，测试的时候流量蹭蹭的就没了T_T<img src="/2017/09/02/v4-to-v6-ss-傻瓜教程/net.png" alt="net"></li>
+<li>占了小便宜，就得有一定的限制，这个限制就是网速会比较慢，毕竟是国外的云服务器，开国内的网站做不到秒开，而且部分网站也刷不出来。另外，使用<strong>全局模式</strong>时不登录校园网的话将无法登录qq、微信等应用，解决方法是登录校园网后ss客户端选择<strong>手动模式</strong>然后用socks5代理到localhost:1086。</li>
 <li>亚马逊AWS的免费期限是一年，一年之后你要是不把实例删除干净的话，它是自动续费的。如果你只是想体验一下，不想续费的话，最好的办法还是按时删除实例。但是我这个人记性经常不好，一年时间大概早就把这件事忘得一干二净了，所以我还写了个程序，运行在实例上，在一年后差不多要续费的时候提醒我删除实例，如果你也想要这个提醒的话，可以参考这里：<a href="https://github.com/Jason2031/BillingReminder" target="_blank" rel="external">BillingReminder</a></li>
 </ol>
 

@@ -1,0 +1,713 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="教程," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="显示代码需要使用listings包，若要$$\LaTeX$$支持代码高亮，需要使用xcolor包： 12\usepackage&amp;#123;listings&amp;#125;\usepackage[svgnames]&amp;#123;xcolor&amp;#125; % 加上svgnames参数以直接使用预定义颜色名称 使用xcolor包提供的\definecolor{&amp;lt;name&amp;gt;}{&amp;lt;model&amp;g">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在latex中显示github diff代码样式">
+<meta property="og:url" content="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/index.html">
+<meta property="og:site_name" content="Ja50n&#39;s B10g Sit3">
+<meta property="og:description" content="显示代码需要使用listings包，若要$$\LaTeX$$支持代码高亮，需要使用xcolor包： 12\usepackage&amp;#123;listings&amp;#125;\usepackage[svgnames]&amp;#123;xcolor&amp;#125; % 加上svgnames参数以直接使用预定义颜色名称 使用xcolor包提供的\definecolor{&amp;lt;name&amp;gt;}{&amp;lt;model&amp;g">
+<meta property="og:image" content="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/result.png">
+<meta property="og:updated_time" content="2018-07-13T05:06:31.373Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在latex中显示github diff代码样式">
+<meta name="twitter:description" content="显示代码需要使用listings包，若要$$\LaTeX$$支持代码高亮，需要使用xcolor包： 12\usepackage&amp;#123;listings&amp;#125;\usepackage[svgnames]&amp;#123;xcolor&amp;#125; % 加上svgnames参数以直接使用预定义颜色名称 使用xcolor包提供的\definecolor{&amp;lt;name&amp;gt;}{&amp;lt;model&amp;g">
+<meta name="twitter:image" content="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/result.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/"/>
+
+
+
+
+
+  <title>在latex中显示github diff代码样式 | Ja50n's B10g Sit3</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ja50n's B10g Sit3</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">随便写写</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Wood">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ja50n's B10g Sit3">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                在latex中显示github diff代码样式
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T11:03:33+08:00">
+                2018-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>显示代码需要使用<code>listings</code>包，若要$$\LaTeX$$支持代码高亮，需要使用<code>xcolor</code>包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\usepackage&#123;listings&#125;</div><div class="line">\usepackage[svgnames]&#123;xcolor&#125; % 加上svgnames参数以直接使用预定义颜色名称</div></pre></td></tr></table></figure>
+<p>使用<code>xcolor</code>包提供的<code>\definecolor{&lt;name&gt;}{&lt;model&gt;}{&lt;color-spec&gt;}</code>来定义颜色，具体请参考<a href="https://en.wikibooks.org/wiki/LaTeX/Colors" target="_blank" rel="external"><code>colors</code>包的文档</a> ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">\definecolor&#123;linenumber&#125;&#123;rgb&#125;&#123;0.5,0.5,0.5&#125;</div><div class="line">\definecolor&#123;diffstart&#125;&#123;named&#125;&#123;Grey&#125;</div><div class="line">\definecolor&#123;diffincl&#125;&#123;named&#125;&#123;Green&#125;</div><div class="line">\definecolor&#123;diffrem&#125;&#123;named&#125;&#123;DarkRed&#125;</div><div class="line">\definecolor&#123;keyword&#125;&#123;named&#125;&#123;Blue&#125;</div><div class="line">\definecolor&#123;comment&#125;&#123;named&#125;&#123;Grey&#125;</div></pre></td></tr></table></figure>
+<p>使用<code>listings</code>包提供的<code>\lstset</code>设置<code>listing</code>全局环境:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">\lstset&#123;</div><div class="line">	language=C,</div><div class="line">	numberstyle=\color&#123;linenumber&#125;,</div><div class="line">	keywordstyle=\color&#123;keyword&#125;,</div><div class="line">	commentstyle=\color&#123;comment&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffstart&#125;]&#123;@&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffincl&#125;]&#123;+&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffrem&#125;]&#123;-&#125;,</div><div class="line">	float=[htb],</div><div class="line">	showstringspaces=false,</div><div class="line">	columns=flexible,</div><div class="line">	basicstyle=&#123;\footnotesize\ttfamily\bfseries&#125;,</div><div class="line">	numbers=left,</div><div class="line">	xleftmargin=4.0ex,</div><div class="line">	breaklines=true,</div><div class="line">	breakatwhitespace=true,</div><div class="line">	tabsize=4, </div><div class="line">	sensitive = true,</div><div class="line">	escapeinside=&#123;(*@&#125;&#123;@*)&#125;,	% 用于内嵌latex语句</div><div class="line">	captionpos=b,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>或使用<code>\lstdefinestyle{&lt;style name&gt;}{&lt;key=value&gt;}</code>创建风格：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\lstdefinestyle&#123;stylename&#125; &#123;</div><div class="line">	...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后就可以用<code>\begin{lstlisting}\end{lstlisting}</code>列出代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">\begin&#123;lstlisting&#125;[caption=&#123;diff&#125;,label=&#123;lst:sourcecode&#125;,frame=tb]	% 如果前面使用\lstdefinestyle定义了风格的话，在[]中加‘style=stylename’</div><div class="line">@@ librabbitmq/amqp_openssl.c:180 -85,8 +85,8 @@</div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">static int amqp_ssl_socket_open(void *base, const char *host, int port, struct timeval *timeout) &#123;</div><div class="line">	// (*@\dots@*)</div><div class="line">+	cert = SSL_get_peer_certificate(self-&gt;ssl);</div><div class="line">	result = SSL_get_verify_result(self-&gt;ssl);</div><div class="line">-	if (X509_V_OK != result) &#123;</div><div class="line">+	if (!cert || X509_V_OK != result) &#123;</div><div class="line">		goto error_out3;</div><div class="line">	&#125;</div><div class="line">	// (*@\dots@*)</div><div class="line">&#125;</div><div class="line">\end&#123;lstlisting&#125;</div></pre></td></tr></table></figure>
+<p>效果如下图</p>
+<p><img src="/2018/07/13/在latex中显示github-diff代码样式/result.png" alt="result"></p>
+<p>最后附上全部$$\LaTeX$$代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line"></div><div class="line">\usepackage&#123;listings&#125;</div><div class="line">\usepackage[svgnames]&#123;xcolor&#125;</div><div class="line"></div><div class="line">\definecolor&#123;linenumber&#125;&#123;rgb&#125;&#123;0.5,0.5,0.5&#125;</div><div class="line">\definecolor&#123;diffstart&#125;&#123;named&#125;&#123;Grey&#125;</div><div class="line">\definecolor&#123;diffincl&#125;&#123;named&#125;&#123;Green&#125;</div><div class="line">\definecolor&#123;diffrem&#125;&#123;named&#125;&#123;DarkRed&#125;</div><div class="line">\definecolor&#123;keyword&#125;&#123;named&#125;&#123;Blue&#125;</div><div class="line">\definecolor&#123;comment&#125;&#123;named&#125;&#123;Grey&#125;</div><div class="line"></div><div class="line">\lstset&#123;</div><div class="line">	language=C,</div><div class="line">	numberstyle=\color&#123;linenumber&#125;,</div><div class="line">	keywordstyle=\color&#123;keyword&#125;,</div><div class="line">	commentstyle=\color&#123;comment&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffstart&#125;]&#123;@&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffincl&#125;]&#123;+&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffrem&#125;]&#123;-&#125;,</div><div class="line">	float=[htb],</div><div class="line">	showstringspaces=false,</div><div class="line">	columns=flexible,</div><div class="line">	basicstyle=&#123;\footnotesize\ttfamily\bfseries&#125;,</div><div class="line">	numbers=left,</div><div class="line">	xleftmargin=4.0ex,</div><div class="line">	breaklines=true,</div><div class="line">	breakatwhitespace=true,</div><div class="line">	tabsize=4, </div><div class="line">	sensitive = true,</div><div class="line">	escapeinside=&#123;(*@&#125;&#123;@*)&#125;,</div><div class="line">	captionpos=b,</div><div class="line">&#125;</div><div class="line"></div><div class="line">\begin&#123;document&#125;</div><div class="line">\begin&#123;lstlisting&#125;[caption=&#123;diff&#125;,label=&#123;lst:sourcecode&#125;,frame=tb]</div><div class="line">@@ librabbitmq/amqp_openssl.c:180 -85,8 +85,8 @@</div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">static int amqp_ssl_socket_open(void *base, const char *host, int port, struct timeval *timeout) &#123;</div><div class="line">	// (*@\dots@*)</div><div class="line">+	cert = SSL_get_peer_certificate(self-&gt;ssl);</div><div class="line">	result = SSL_get_verify_result(self-&gt;ssl);</div><div class="line">-	if (X509_V_OK != result) &#123;</div><div class="line">+	if (!cert || X509_V_OK != result) &#123;</div><div class="line">		goto error_out3;</div><div class="line">	&#125;</div><div class="line">	// (*@\dots@*)</div><div class="line">&#125;</div><div class="line">\end&#123;lstlisting&#125;</div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/25/给OpenSSL提交纠错的二三事/" rel="next" title="给OpenSSL提交纠错的二三事">
+                <i class="fa fa-chevron-left"></i> 给OpenSSL提交纠错的二三事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Jason Wood" />
+          <p class="site-author-name" itemprop="name">Jason Wood</p>
+           
+              <p class="site-description motion-element" itemprop="description">学习笔记 & 吃吃吃 & 玩玩玩</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Jason2031" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jason Wood</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

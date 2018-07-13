@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="教程," />
+  <meta name="keywords" content="latex," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="显示代码需要使用listings包，若要$$\LaTeX$$支持代码高亮，需要使用xcolor包： 12\usepackage&amp;#123;listings&amp;#125;\usepackage[svgnames]&amp;#123;xcolor&amp;#125; % 加上svgnames参数以直接使用预定义颜色名称 使用xcolor包提供的\definecolor{&amp;lt;name&amp;gt;}{&amp;lt;model&amp;g">
-<meta name="keywords" content="教程">
+<meta name="description" content="自定义lstlisting样式">
+<meta name="keywords" content="latex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在latex中显示github diff代码样式">
 <meta property="og:url" content="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/index.html">
 <meta property="og:site_name" content="Ja50n&#39;s B10g Sit3">
-<meta property="og:description" content="显示代码需要使用listings包，若要$$\LaTeX$$支持代码高亮，需要使用xcolor包： 12\usepackage&amp;#123;listings&amp;#125;\usepackage[svgnames]&amp;#123;xcolor&amp;#125; % 加上svgnames参数以直接使用预定义颜色名称 使用xcolor包提供的\definecolor{&amp;lt;name&amp;gt;}{&amp;lt;model&amp;g">
+<meta property="og:description" content="自定义lstlisting样式">
 <meta property="og:image" content="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/result.png">
-<meta property="og:updated_time" content="2018-07-13T05:06:31.373Z">
+<meta property="og:updated_time" content="2018-07-13T05:15:49.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在latex中显示github diff代码样式">
-<meta name="twitter:description" content="显示代码需要使用listings包，若要$$\LaTeX$$支持代码高亮，需要使用xcolor包： 12\usepackage&amp;#123;listings&amp;#125;\usepackage[svgnames]&amp;#123;xcolor&amp;#125; % 加上svgnames参数以直接使用预定义颜色名称 使用xcolor包提供的\definecolor{&amp;lt;name&amp;gt;}{&amp;lt;model&amp;g">
+<meta name="twitter:description" content="自定义lstlisting样式">
 <meta name="twitter:image" content="https://jason2031.github.io/2018/07/13/在latex中显示github-diff代码样式/result.png">
 
 
@@ -330,7 +330,9 @@
       
 
       
-        <p>显示代码需要使用<code>listings</code>包，若要$$\LaTeX$$支持代码高亮，需要使用<code>xcolor</code>包：</p>
+        <p>自定义lstlisting样式</p>
+<a id="more"></a>
+<p>显示代码需要使用<code>listings</code>包，若要latex支持代码高亮，需要使用<code>xcolor</code>包：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\usepackage&#123;listings&#125;</div><div class="line">\usepackage[svgnames]&#123;xcolor&#125; % 加上svgnames参数以直接使用预定义颜色名称</div></pre></td></tr></table></figure>
 <p>使用<code>xcolor</code>包提供的<code>\definecolor{&lt;name&gt;}{&lt;model&gt;}{&lt;color-spec&gt;}</code>来定义颜色，具体请参考<a href="https://en.wikibooks.org/wiki/LaTeX/Colors" target="_blank" rel="external"><code>colors</code>包的文档</a> ：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">\definecolor&#123;linenumber&#125;&#123;rgb&#125;&#123;0.5,0.5,0.5&#125;</div><div class="line">\definecolor&#123;diffstart&#125;&#123;named&#125;&#123;Grey&#125;</div><div class="line">\definecolor&#123;diffincl&#125;&#123;named&#125;&#123;Green&#125;</div><div class="line">\definecolor&#123;diffrem&#125;&#123;named&#125;&#123;DarkRed&#125;</div><div class="line">\definecolor&#123;keyword&#125;&#123;named&#125;&#123;Blue&#125;</div><div class="line">\definecolor&#123;comment&#125;&#123;named&#125;&#123;Grey&#125;</div></pre></td></tr></table></figure>
@@ -342,7 +344,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">\begin&#123;lstlisting&#125;[caption=&#123;diff&#125;,label=&#123;lst:sourcecode&#125;,frame=tb]	% 如果前面使用\lstdefinestyle定义了风格的话，在[]中加‘style=stylename’</div><div class="line">@@ librabbitmq/amqp_openssl.c:180 -85,8 +85,8 @@</div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">static int amqp_ssl_socket_open(void *base, const char *host, int port, struct timeval *timeout) &#123;</div><div class="line">	// (*@\dots@*)</div><div class="line">+	cert = SSL_get_peer_certificate(self-&gt;ssl);</div><div class="line">	result = SSL_get_verify_result(self-&gt;ssl);</div><div class="line">-	if (X509_V_OK != result) &#123;</div><div class="line">+	if (!cert || X509_V_OK != result) &#123;</div><div class="line">		goto error_out3;</div><div class="line">	&#125;</div><div class="line">	// (*@\dots@*)</div><div class="line">&#125;</div><div class="line">\end&#123;lstlisting&#125;</div></pre></td></tr></table></figure>
 <p>效果如下图</p>
 <p><img src="/2018/07/13/在latex中显示github-diff代码样式/result.png" alt="result"></p>
-<p>最后附上全部$$\LaTeX$$代码：</p>
+<p>最后附上全部latex代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line"></div><div class="line">\usepackage&#123;listings&#125;</div><div class="line">\usepackage[svgnames]&#123;xcolor&#125;</div><div class="line"></div><div class="line">\definecolor&#123;linenumber&#125;&#123;rgb&#125;&#123;0.5,0.5,0.5&#125;</div><div class="line">\definecolor&#123;diffstart&#125;&#123;named&#125;&#123;Grey&#125;</div><div class="line">\definecolor&#123;diffincl&#125;&#123;named&#125;&#123;Green&#125;</div><div class="line">\definecolor&#123;diffrem&#125;&#123;named&#125;&#123;DarkRed&#125;</div><div class="line">\definecolor&#123;keyword&#125;&#123;named&#125;&#123;Blue&#125;</div><div class="line">\definecolor&#123;comment&#125;&#123;named&#125;&#123;Grey&#125;</div><div class="line"></div><div class="line">\lstset&#123;</div><div class="line">	language=C,</div><div class="line">	numberstyle=\color&#123;linenumber&#125;,</div><div class="line">	keywordstyle=\color&#123;keyword&#125;,</div><div class="line">	commentstyle=\color&#123;comment&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffstart&#125;]&#123;@&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffincl&#125;]&#123;+&#125;,</div><div class="line">	morecomment=[f][\color&#123;diffrem&#125;]&#123;-&#125;,</div><div class="line">	float=[htb],</div><div class="line">	showstringspaces=false,</div><div class="line">	columns=flexible,</div><div class="line">	basicstyle=&#123;\footnotesize\ttfamily\bfseries&#125;,</div><div class="line">	numbers=left,</div><div class="line">	xleftmargin=4.0ex,</div><div class="line">	breaklines=true,</div><div class="line">	breakatwhitespace=true,</div><div class="line">	tabsize=4, </div><div class="line">	sensitive = true,</div><div class="line">	escapeinside=&#123;(*@&#125;&#123;@*)&#125;,</div><div class="line">	captionpos=b,</div><div class="line">&#125;</div><div class="line"></div><div class="line">\begin&#123;document&#125;</div><div class="line">\begin&#123;lstlisting&#125;[caption=&#123;diff&#125;,label=&#123;lst:sourcecode&#125;,frame=tb]</div><div class="line">@@ librabbitmq/amqp_openssl.c:180 -85,8 +85,8 @@</div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">static int amqp_ssl_socket_open(void *base, const char *host, int port, struct timeval *timeout) &#123;</div><div class="line">	// (*@\dots@*)</div><div class="line">+	cert = SSL_get_peer_certificate(self-&gt;ssl);</div><div class="line">	result = SSL_get_verify_result(self-&gt;ssl);</div><div class="line">-	if (X509_V_OK != result) &#123;</div><div class="line">+	if (!cert || X509_V_OK != result) &#123;</div><div class="line">		goto error_out3;</div><div class="line">	&#125;</div><div class="line">	// (*@\dots@*)</div><div class="line">&#125;</div><div class="line">\end&#123;lstlisting&#125;</div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure>
 
       
@@ -373,7 +375,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/教程/" rel="tag"># 教程</a>
+            <a href="/tags/latex/" rel="tag"># latex</a>
           
         </div>
       
@@ -457,7 +459,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -470,7 +472,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>

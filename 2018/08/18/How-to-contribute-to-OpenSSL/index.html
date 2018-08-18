@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="教程," />
 
 
 
@@ -94,15 +94,17 @@
 
 
 
-<meta name="description" content="学习笔记 &amp; 吃吃吃 &amp; 玩玩玩">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ja50n&#39;s B10g Sit3">
-<meta property="og:url" content="https://jason2031.github.io/archives/2017/08/index.html">
+<meta name="description" content="阅读OpenSSL自带的CONTRIBUTING文档，其中要注意的有以下几点：  签署Contributor License Agreement (CLA)，详细访问https://www.openssl.org/policies/cla.html 代码需要遵循他们的coding style   在GitHub上forkOpenSSL的项目  克隆fork之后的OpenSSL到本地 1git c">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How_to_contribute_to_OpenSSL">
+<meta property="og:url" content="https://jason2031.github.io/2018/08/18/How-to-contribute-to-OpenSSL/index.html">
 <meta property="og:site_name" content="Ja50n&#39;s B10g Sit3">
-<meta property="og:description" content="学习笔记 &amp; 吃吃吃 &amp; 玩玩玩">
+<meta property="og:description" content="阅读OpenSSL自带的CONTRIBUTING文档，其中要注意的有以下几点：  签署Contributor License Agreement (CLA)，详细访问https://www.openssl.org/policies/cla.html 代码需要遵循他们的coding style   在GitHub上forkOpenSSL的项目  克隆fork之后的OpenSSL到本地 1git c">
+<meta property="og:updated_time" content="2018-08-18T08:46:29.173Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ja50n&#39;s B10g Sit3">
-<meta name="twitter:description" content="学习笔记 &amp; 吃吃吃 &amp; 玩玩玩">
+<meta name="twitter:title" content="How_to_contribute_to_OpenSSL">
+<meta name="twitter:description" content="阅读OpenSSL自带的CONTRIBUTING文档，其中要注意的有以下几点：  签署Contributor License Agreement (CLA)，详细访问https://www.openssl.org/policies/cla.html 代码需要遵循他们的coding style   在GitHub上forkOpenSSL的项目  克隆fork之后的OpenSSL到本地 1git c">
 
 
 
@@ -130,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="https://jason2031.github.io/archives/2017/08/"/>
+  <link rel="canonical" href="https://jason2031.github.io/2018/08/18/How-to-contribute-to-OpenSSL/"/>
 
 
 
 
 
-  <title>归档 | Ja50n's B10g Sit3</title>
+  <title>How_to_contribute_to_OpenSSL | Ja50n's B10g Sit3</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,66 +247,196 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 8 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://jason2031.github.io/2018/08/18/How-to-contribute-to-OpenSSL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jason Wood">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ja50n's B10g Sit3">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                How_to_contribute_to_OpenSSL
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-18T16:45:03+08:00">
+                2018-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
-      
 
+      
+        <ol>
+<li><p>阅读OpenSSL自带的<a href="https://github.com/openssl/openssl/blob/master/CONTRIBUTING" target="_blank" rel="external">CONTRIBUTING文档</a>，其中要注意的有以下几点：</p>
+<ul>
+<li>签署Contributor License Agreement (CLA)，详细访问<a href="https://www.openssl.org/policies/cla.html" target="_blank" rel="external">https://www.openssl.org/policies/cla.html</a></li>
+<li>代码需要遵循他们的<a href="https://www.openssl.org/policies/codingstyle.html" target="_blank" rel="external">coding style</a></li>
+</ul>
+</li>
+<li><p>在GitHub上fork<a href="https://github.com/openssl/openssl" target="_blank" rel="external">OpenSSL</a>的项目</p>
+</li>
+<li><p>克隆fork之后的OpenSSL到本地</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/[username]/openssl.git</div></pre></td></tr></table></figure>
+</li>
+<li><p>（可选）对于已克隆到本地的项目，要让fork的项目和原项目保持同步，使用以下指令更新本地和远端项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd path/to/repo</div><div class="line">git fetch --all</div><div class="line">git merge [original_repo_name]/master</div><div class="line">git push -u origin</div></pre></td></tr></table></figure>
+</li>
+<li><p>定位缺陷</p>
+</li>
+<li><p>在<a href="https://github.com/openssl/openssl/issues" target="_blank" rel="external">issue页面</a>提交issue。Title要写清楚缺陷位置及内容，如<a href="https://github.com/openssl/openssl/issues/6822" target="_blank" rel="external">#6822</a>中写道<code>Missing return value check of BN_sub() in crypto/rsa/rsa_ossl.c</code>；在comment位置适当加上详细的描述，包括具体位置、为什么这是一个缺陷并附上一小段代码片段。</p>
+</li>
+<li><p>（可选）新建分支用于修改代码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b [new_branch_name]</div></pre></td></tr></table></figure>
+</li>
+<li><p>修复缺陷，保存</p>
+</li>
+<li><p>提交修改</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add [modified_files]</div><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>commit message一般包含两部分：</p>
+<ol>
+<li>title：用简短的话说明本次修改的内容，一般格式为：<code>[file_name]: do something</code>。如<a href="https://github.com/openssl/openssl/pull/6585" target="_blank" rel="external">#6585</a>中写道<code>ssl/statem/statem_srvr.c: add missing check for EVP_PKEY_get0_DH()</code>。</li>
+<li>body：解释本次修改的原因，<em>如果修复了某个issue，使用<code>Fixes #[issue_ID]</code>来引用</em>。</li>
+</ol>
+</li>
+<li><p>push commit</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push</div></pre></td></tr></table></figure>
+</li>
+<li><p>在fork项目网页上可以发现可以create pull request，如果前面步骤规范的话，直接点击create即可</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/13/在latex中显示github-diff代码样式/" rel="next" title="在latex中显示github diff代码样式">
+                <i class="fa fa-chevron-left"></i> 在latex中显示github diff代码样式
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/10/这是一碗狗粮/" itemprop="url">
-              
-                <span itemprop="name">这是一碗狗粮</span>
-              
-            </a>
-        
-      </h1>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/18/How-to-contribute-to-linux-kernel/" rel="prev" title="How_to_contribute_to_linux_kernel">
+                How_to_contribute_to_linux_kernel <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-10T19:23:48+08:00"
-              content="2017-08-10" >
-          08-10
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -312,6 +444,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -516,11 +652,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
